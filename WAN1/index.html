@@ -105,3 +105,11 @@ Fecha
 30 ,.....,.....,.....,.....,.....,.....,.....,.....,.....,.....,.....,.....,.....,.....,.....,.....,.....,.....,.....,.....,.....,.....,.....,.....
 31 ,.....,.....,.....,.....,.....,.....,.....,.....,.....,.....,.....,.....,.....,.....,.....,.....,.....,.....,.....,.....,.....,.....,.....,.....
 
+<!--   <div id="Etiq"></div> -->
+   <div id = "Actualizado"></div>
+   <script>
+      var FechaHora   = new Date(document.lastModified).toISOString();
+      document.getElementById("Actualizado").innerHTML = "Actualizacion del " + FechaHora ;
+   </script>
+  </body>
+</html>
