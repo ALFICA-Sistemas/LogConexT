@@ -8,4 +8,5 @@ function CargaImg(IDimagen, URLimagen){
    var tLocal = new Date(tiempo.getTime() - (tiempo.getTimezoneOffset() * 60000 )).toISOString();
    var tISO = tLocal.substr(0, 10)+" a las "+tLocal.substr(11, 5);
    document.getElementById("subtit").innerHTML = "Actualizado el "+tISO;
+   console.log(tISO);
 }
