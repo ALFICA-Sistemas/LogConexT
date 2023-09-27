@@ -1,5 +1,6 @@
 body {
-   background: url(../_recursos/LogoFondo_100x100.PNG);
+/*   background: url(../_recursos/LogoFondo_100x100.PNG);   */
+   background-color:Tomato;
    font-family: Monoespaciado;
    src: url(../_comunes/VictorMono-Regular.ttf);
 }
