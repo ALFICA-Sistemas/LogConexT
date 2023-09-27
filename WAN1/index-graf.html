@@ -8,14 +8,14 @@
       <script src="js/comun.js"></script>
    </head>
 
-   <body onload="setInterval(CargaImg('LogGraf','202309_ipify.png'), 30000)">
+   <body> <!--/body> onload="setInterval(CargaImg('LogGraf','202309_ipify.png'), 30000)"> -->
       <header>Registro de conectividad este mes con <select id="ListaURLs">ipify.org</select>)</header>
       <img id="LogGraf" src="202309_ipify.png" alt="Log del mes">
       <footer id="subtit">-</footer>
    </body>
 
   <script>
-
+setInterval(CargaImg('LogGraf','202309_ipify.png'), 30000)
   </script>
 
 </html>
