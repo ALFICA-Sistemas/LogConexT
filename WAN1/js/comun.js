@@ -26,8 +26,8 @@ function LeerTexto(URL){
          var type = Peticion.getResponseHeader('Content-Type');
          if (type.indexOf("text") !== 1) {
             return Peticion.responseText;
-            console.log(Peticion.responseText);
             }
+         console.log(Peticion.responseText);
       }
    }
 }
