@@ -14,3 +14,18 @@ function CargaImg(objImagen, URLimagen){
    document.getElementById("subtit").innerHTML = "Actualizado el "+tISO;
 
 }
+
+function LeerTexto(UTL){
+   var Solic = new XMLHttpSolic();
+   Solic.open('GET', URL, true);
+   Solic.send(null);
+   Solic.onreadystatechange = function () {
+      if (Solic.readyState === 4 && Solic.status === 200) {
+         var type = Solic.getResponseHeader('Content-Type');
+         if (type.indexOf("text") !== 1) {
+            return Solic.responseText;
+            }
+      }
+   }
+}
+
