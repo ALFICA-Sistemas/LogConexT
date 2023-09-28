@@ -23,11 +23,11 @@ function LeerTexto(URL){
    Peticion.onreadystatechange = function () {
       if (Peticion.readyState === 4 && Peticion.status === 200) {
          var type = Peticion.getResponseHeader('Content-Type');
-         console.log(type);
+         console.log("Content-type: "+type);
 //         if (type.indexOf("text") !== 1) {
             return Peticion.responseText;
 //            }
-         console.log(Peticion.responseText);
+         console.log("Leido: "+Peticion.responseText);
       }
    }
 }
