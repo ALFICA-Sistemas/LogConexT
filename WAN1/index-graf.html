@@ -14,13 +14,12 @@
       
       <script>
          function Init(){
-            console.log("Init");
+            console.log("Init "+new Date().getTime());
             document.getElementById("dest").innerHTML = LeerTexto("config.txt");
             CargaImg(document.getElementById('LogGraf'), "202309_ipify.png");
             setInterval(RecargaImg, 5000);      // Recarga periodica de la imagen
             }
          function RecargaImg(){
-            console.log(new Date().getTime())
             CargaImg(document.getElementById('LogGraf'), "202309_ipify.png");
             }
       </script>

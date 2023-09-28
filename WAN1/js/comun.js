@@ -23,9 +23,10 @@ function LeerTexto(URL){
    Peticion.onreadystatechange = function () {
       if (Peticion.readyState === 4 && Peticion.status === 200) {
          var type = Peticion.getResponseHeader('Content-Type');
-         if (type.indexOf("text") !== 1) {
+         console.log(type);
+//         if (type.indexOf("text") !== 1) {
             return Peticion.responseText;
-            }
+//            }
          console.log(Peticion.responseText);
       }
    }
