@@ -8,19 +8,19 @@
    </head>
 
    <body onload="Init()">
-      <header>Registro de conectividad este a <div id="dest">-</div></header>
-      <img id="LogGraf"  alt="Log del mes">
-      <footer id="subtit">-</footer>
+      <header>Registro de conectividad este a <div id="dest">-</div></header> <!-- Titulo -->
+      <img id="LogGraf" alt="Log del mes">                                    <!-- Gráfico -->
+      <footer id="subtit">-</footer>                                          <!-- Pie de gráfico -->
       
       <script>
          function Init(){
             console.log("Init");
             document.getElementById("dest").innerHTML = LeerTexto("config.txt");
             CargaImg(document.getElementById('LogGraf'), "202309_ipify.png");
-//            RecargaImg;                         // Carga inicial de la imagen
             setInterval(RecargaImg, 5000);      // Recarga periodica de la imagen
             }
          function RecargaImg(){
+            console.log(new Date().getTime())
             CargaImg(document.getElementById('LogGraf'), "202309_ipify.png");
             }
       </script>

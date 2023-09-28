@@ -1,7 +1,6 @@
 // var Imagen = document.getElementById('LogGraf');
 
 function CargaImg(objImagen, URLimagen){
-   console.log("CargaImg en "+URLimagen)
    var tiempo = new Date();                                          // Leer el timestamp
    // Asignar el source a la imagen con el mismo URL + timestamp para diferenciarlo y que no la agarre del cache
    objImagen.setAttribute('src', URLimagen+'?'+tiempo.getTime());
