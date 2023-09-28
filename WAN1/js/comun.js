@@ -1,7 +1,7 @@
 // var Imagen = document.getElementById('LogGraf');
 
 function CargaImg(objImagen, URLimagen){
-   console.log('CargaImg en '+URLimagen)
+   console.log("CargaImg en "+URLimagen)
    var tiempo = new Date();                                          // Leer el timestamp
    // Asignar el source a la imagen con el mismo URL + timestamp para diferenciarlo y que no la agarre del cache
    objImagen.setAttribute('src', URLimagen+'?'+tiempo.getTime());
@@ -17,18 +17,17 @@ function CargaImg(objImagen, URLimagen){
 }
 
 function LeerTexto(URL){
-   console.log('LeerTexto en '+URL)
-   var Solic = new XMLHttpSolic();
-   Solic.open('GET', URL, true);
-   Solic.send(null);
-   Solic.onreadystatechange = function () {
-      if (Solic.readyState === 4 && Solic.status === 200) {
-         var type = Solic.getResponseHeader('Content-Type');
+   console.log("LeerTexto en "+URL)
+   var Peticion = new XMLHttpRequest();
+   Peticion.open('GET', URL, true);
+   Peticion.send(null);
+   Peticion.onreadystatechange = function () {
+      if (Peticion.readyState === 4 && Peticion.status === 200) {
+         var type = Peticion.getResponseHeader('Content-Type');
          if (type.indexOf("text") !== 1) {
-            return Solic.responseText;
-            console.log(Solic.responseText);
+            return Peticion.responseText;
+            console.log(Peticion.responseText);
             }
       }
    }
 }
-
