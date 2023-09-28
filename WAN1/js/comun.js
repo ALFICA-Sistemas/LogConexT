@@ -21,9 +21,10 @@ function LeerTexto(URL){
    Peticion.open('GET', URL, true);
    Peticion.send(null);
    Peticion.onreadystatechange = function () {
+   console.log(Peticion.readyState+" "+Peticion.status);
       if (Peticion.readyState === 4 && Peticion.status === 200) {
          var type = Peticion.getResponseHeader('Content-Type');
-         console.log("Content-type: "+type+type.indexOf("text"));
+         console.log("Content-type: "+type+" index="+type.indexOf("text"));
 //         if (type.indexOf("text") !== 1) {
             return Peticion.responseText;
 //            }
