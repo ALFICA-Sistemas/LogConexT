@@ -7,16 +7,17 @@
       <script src="js/comun.js"></script>
    </head>
 
-   <body onload="Init()">   
+   <body onload="Init()">
       <header>Registro de conectividad este mes (usando <dest>-</dest>)</header>
-      <img id="LogGraf" src="202309_ipify.png" alt="Log del mes">
+      <img id="LogGraf"  alt="Log del mes">
       <footer id="subtit">-</footer>
       
       <script>
          function Init(){
-            document.getElementById("subtit").innerHTML = LeerTexto(config.txt);
-            RecargaImg;
-            setInterval("RecargaImg", 30000);
+         console.log('Init');
+       //     document.getElementById("dest").innerHTML = LeerTexto(config.txt);
+            RecargaImg;                         // Carga inicial de la imagen
+            setInterval("RecargaImg", 30000);   // Recarga periodica de la imagen
          }
          function RecargaImg(){
             CargaImg(document.getElementById('LogGraf'), "202309_ipify.png");
