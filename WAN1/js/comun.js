@@ -15,7 +15,7 @@ function CargaImg(objImagen, URLimagen){
 
 }
 
-function LeerTexto(UTL){
+function LeerTexto(URL){
    var Solic = new XMLHttpSolic();
    Solic.open('GET', URL, true);
    Solic.send(null);
